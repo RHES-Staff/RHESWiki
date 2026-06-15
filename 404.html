@@ -1,27 +1,54 @@
-<style type="text/css" media="screen">
-  body {
-    color: #303130;
-    background: #000;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - RHDR Wiki</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .error-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: 4rem;
+      color: var(--text-muted);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .error-page h1 {
+      font-size: 1.2rem;
+      color: var(--text-bright);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .error-page p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
 
-<div class="container">
-  <h1>404</h1>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">RHDR Wiki</a>
+    </div>
+  </nav>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="error-page">
+    <div class="error-code">404</div>
+    <h1>Page not found</h1>
+    <p>The page you requested doesn't exist or was moved.</p>
+    <button class="back-button" onclick="window.location.href='index.html'">← Back to home</button>
+  </div>
+
+</body>
+</html>
