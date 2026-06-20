@@ -1,0 +1,114 @@
+.credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.contributor-card {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+}
+
+.contributor-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contributor-image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--bg-panel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.contributor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contributor-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.contributor-name {
+    color: var(--text-bright);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contributor-role {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contributor-roblox {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-bottom: 12px;
+}
+
+.contributor-roblox strong {
+    color: var(--text);
+}
+
+.contributor-quote {
+    color: var(--text);
+    font-style: italic;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    padding: 12px;
+    border-left: 3px solid var(--accent-muted);
+    background: rgba(61, 143, 212, 0.05);
+    margin-top: auto;
+}
+
+
+@media (max-width: 720px) {
+    .credits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contributor-card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contributor-image {
+        width: 120px;
+        min-width: 120px;
+        aspect-ratio: 1;
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+    }
+
+    .contributor-info {
+        padding: 12px;
+    }
+
+    .contributor-name {
+        font-size: 0.95rem;
+    }
+
+    .contributor-quote {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+}
